@@ -1,0 +1,43 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/progress/style/index";
+
+@success-color:#4e92f5;
+@progress-prefix-cls: ~"@{ant-prefix}-progress";
+.@{progress-prefix-cls} {
+
+  &-bg {
+    background-color: @success-color;
+  }
+
+  &-status-success {
+    .@{progress-prefix-cls}-bg {
+      background-color: @success-color;
+    }
+    .@{progress-prefix-cls}-text {
+      color: @success-color;
+    }
+    .@{progress-prefix-cls}-circle-path {
+      stroke: @success-color;
+    }
+  }
+
+}
+.progressClose{
+  position:relative;
+}
+.progressClose>i.anticon.anticon-close{
+  position:absolute;
+  right: -28px;
+  top: 2px;
+  font-size: 18px;
+  color: #999999;
+}
+.progressClose>p{
+  margin-top: 4px;
+}
+.progressClose>Button{
+    float: right;
+    margin-top: 13px;
+}
+

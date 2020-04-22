@@ -1,0 +1,36 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/table/style/index";
+
+@table-row-hover-bg:#f4f4f4;
+@table-prefix-cls: ~"@{ant-prefix}-table";
+.@{table-prefix-cls} {
+  &-thead > tr,
+  &-tbody > tr {
+    transition: all .3s;
+    &.@{table-prefix-cls}-row-hover,
+    &:hover {
+      & > td {
+        background: @table-row-hover-bg;
+        cursor:pointer;
+      }
+    }
+  }
+
+  &-thead > tr > th {
+    background: #f3f3f3;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    font-size:13px;
+    color:#666;
+  }
+
+  &-thead > tr > th,
+  &-tbody > tr > td {
+    padding: 14px 8px;
+  }
+
+
+}
+
+

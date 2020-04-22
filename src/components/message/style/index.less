@@ -1,0 +1,44 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/message/style/index";
+
+@message-prefix-cls: ~"@{ant-prefix}-message";
+
+.@{message-prefix-cls} {
+  &-success .@{iconfont-css-prefix} {
+    color: @info-color;
+  }
+
+  &-notice-content {
+    padding: 16px ;
+  }
+
+  &-success, &-error ,&-warning, &-info{
+    position: relative;
+  }
+  &-success:before,  &-error:before ,&-warning:before, &-info:before{
+    content: '';
+    display: block;
+    height: 50px;
+    width: 6px;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &-success:before{
+    background: @info-color;
+  }
+  &-error:before{
+    background:  @error-color;
+  }
+  &-warning:before{
+    background: @warning-color;;
+  }
+  &-info:before{
+    background: @info-color;
+  }
+
+}

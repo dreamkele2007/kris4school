@@ -1,0 +1,50 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+
+@import "~antd/lib/input/style/index";
+@import "~antd/lib/button/style/index";
+
+@calendar-prefix-cls: ~"@{ant-prefix}-calendar";
+@calendar-timepicker-prefix-cls: ~"@{ant-prefix}-calendar-time-picker";
+
+@import "Picker";
+@import "Calendar";
+@import "RangePicker";
+@import "TimePicker";
+@import "MonthPanel";
+@import "YearPanel";
+@import "DecadePanel";
+@import "MonthPicker";
+
+.@{calendar-prefix-cls} {
+
+  &-date {
+    display: block;
+    margin: 0 auto;
+    color: @text-color;
+    border-radius: 13px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: @border-width-base @border-style-base transparent;
+    padding: 0;
+    background: transparent;
+    text-align: center;
+    transition: background 0.3s ease;
+
+    &-panel {
+      position: relative;
+    }
+
+    &:hover {
+      background: @item-hover-bg;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: #fff;
+      background: @primary-5;
+    }
+  }
+
+}

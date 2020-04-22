@@ -1,0 +1,19 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/menu/style/index";
+
+
+@import "~antd/lib/input/style/index";
+@import "~antd/lib/button/style/index";
+@import "~antd/lib/grid/style/index";
+
+@import "~antd/lib/form/style/mixin";
+
+@form-prefix-cls: ~"@{ant-prefix}-form";
+.has-success {
+  &.has-feedback:after {
+    content: '\e630';
+    color: #4e92f5;
+  }
+}
+

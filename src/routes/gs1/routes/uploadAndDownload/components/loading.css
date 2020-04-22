@@ -1,0 +1,10 @@
+/**
+  加载中，遮盖样式
+ */
+.ant-spin-nested-loading > div > .ant-spin {
+  position: absolute;
+  height: 200%!important;
+  max-height: 320px;
+  width: 100%;
+  z-index: 4;
+}

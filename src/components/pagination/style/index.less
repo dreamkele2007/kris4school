@@ -1,0 +1,58 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/input/style/index";
+@import "~antd/lib/pagination/style/index";
+//自定义圆角
+@pagination-radius:50%;
+@primary-color:#4e92f5;
+
+
+@pagination-prefix-cls: ~"@{ant-prefix}-pagination";
+.@{pagination-prefix-cls} {
+  &.mini &-item {
+    border:1px solid #d9d9d9;
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 5px;
+
+    &-active {
+      border:1px solid @primary-color;
+    }
+
+  }
+
+  &-item {
+    border-radius: @pagination-radius;
+    &-active {
+      color: #fff;
+    }
+  }
+
+  &-prev,
+  &-next,
+  &-jump-prev,
+  &-jump-next {
+    border-radius: @pagination-radius;
+  }
+
+  &-simple &-simple-pager {
+    input {
+      border-radius: @pagination-radius;
+    }
+  }
+
+  &-options {
+    &-quick-jumper {
+      input {
+        .input;
+        margin: 0 8px;
+        width: 50px;
+        border-radius: 13px;
+        text-align: center;
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,37 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/modal/style/index";
+
+@dialog-prefix-cls: ~"@{ant-prefix}-modal";
+.@{dialog-prefix-cls} {
+  &-title {
+    font-size: 14px;
+    text-align: center;
+  }
+  &-body {
+    color:#999;
+      p{
+        padding:10px 40px;
+      }
+      h6{
+        font-size: 14px;
+        color:#333;
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+          span{
+            color:#4e92f5
+          }
+      }
+  }
+
+  &-footer {
+    border: none;
+    text-align:center;
+    button + button {
+      margin-left: 16px;
+      margin-bottom: 30px;
+    }
+  }
+}
+

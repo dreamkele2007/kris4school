@@ -1,0 +1,22 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/upload/style/index";
+
+
+@upload-prefix-cls: ~"@{ant-prefix}-upload";
+@upload-item: ~"@{ant-prefix}-upload-list-item";
+.@{upload-prefix-cls} {
+
+}
+//自定义一行中的列表
+.upload-list-inline .ant-upload-list-item {
+  float: left;
+  width: 200px;
+  margin-right: 8px;
+}
+.upload-list-inline .ant-upload-animate-enter {
+  animation-name: uploadAnimateInlineIn;
+}
+.upload-list-inline .ant-upload-animate-leave {
+  animation-name: uploadAnimateInlineOut;
+}

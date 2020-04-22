@@ -1,0 +1,20 @@
+@import "../../style/themes/default";
+@import "~antd/lib/style/mixins/index";
+@import "~antd/lib/tabs/style/index";
+
+@tab-prefix-cls: ~"@{ant-prefix}-tabs";
+.@{tab-prefix-cls} {
+  &-extra-content {
+    .@{tab-prefix-cls}-new-tab {
+      font-weight: bold;
+      border-radius: 50%;
+      border: none;
+      color: #fff;
+      background:@primary-color;
+      &:hover {
+        color: #ffffff;
+        background: #4178d8;
+      }
+    }
+  }
+}

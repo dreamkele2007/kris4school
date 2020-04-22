@@ -1,0 +1,113 @@
+body{background: #eaf0f3}
+body.bodybg{font-family:"microsoft yahei"}
+/*交错渐变背景*/
+.bodybg1:before{
+  z-index:-2;
+  content:"";
+  display:block;
+  width:100%;
+  height:70px;
+  position:absolute;
+  top:0;
+  left:0;
+  background-image:linear-gradient(-90deg, #4f8aee 3%, #90000A 100%)
+}
+
+/*弹框div内容自动换行*/
+.ant-confirm-content{
+  word-break: break-all;
+}
+
+/*滚动条*/
+::-webkit-scrollbar{width:8px;height:8px;}
+div::-webkit-scrollbar,ul::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-track{background:rgba(0,0,0,0)}
+::-webkit-scrollbar-thumb{border-radius:5px;background:rgba(0,0,0,0.2);}
+
+/*侧栏导航样式覆盖*/
+.ant-menu, .ant-menu-inline,  .ant-menu-item>a{
+font-size:13px;
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-item>a{
+  font-size:12px;
+  color:#9a9a9a;
+}
+.ant-menu-inline, .ant-menu-vertical {
+  border-right: none;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #f3f3f3;
+}
+.ant-menu-item-selected {
+  color: #666;
+}
+
+.ant-menu-item-selected > a, .ant-menu-item-selected > a:hover {
+  color: #000000;
+}
+
+.ant-menu-inline .ant-menu-item:after, .ant-menu-vertical .ant-menu-item:after {
+  border-right: 3px solid #4E92F5;
+  right: 99%;
+}
+.ant-layout{
+  background:none;
+}
+.ant-menu{
+  background:none;
+}
+a:hover{
+  text-decoration:none;
+}
+.ant-layout-sider {
+  position: inherit;
+}
+/*.ant-menu-item .anticon, .ant-menu-submenu-title .anticon, .ant-menu-submenu-title .anticon{*/
+  /*margin-right: 20px;*/
+/*}*/
+
+.ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+ .ant-layout-sider-collapsed .anticon+span {
+  display: none;
+}
+ .ant-layout-sider-collapsed .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+  display: none;
+}
+ /*识别折叠状态下的图标及文字样式*/
+.scroll{
+  height:calc(100vh - 90px);
+  overflow:scroll;
+  overflow-x:hidden;
+}
+.show{
+  overflow: visible;
+}
+.show .ant-menu-item>a{
+  color:transparent;
+}
+.show .ant-menu-item > a .anticon{
+  color:#666;
+}
+.ant-menu-sub.ant-menu-vertical  > .ant-menu-item>a{
+  font-size:12px;
+  color:#9a9a9a;
+}
+/*识别折叠状态下的图标及文字样式///*/
+/*单行溢出折行*/
+.ant-timeline-item-content{
+  white-space: nowrap;
+}
+.ant-timeline-item-content:hover {
+  color: #068ae8;
+}
+/*右侧tab切换*/
+.ant-tabs-nav{
+  float: right;
+}
+/*card边框个性化 去掉多级搜索边框*/
+.ant-card-bordered{
+  border:none;
+}

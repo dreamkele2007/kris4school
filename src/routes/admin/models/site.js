@@ -1,4 +1,5 @@
 import ajax from '../../../constants/ajax';
+import { func } from 'prop-types';
 export const REQUEST_SITE = 'site.REQUEST_SITE';
 export const RECEIVE_SITE = 'site.RECEIVE_SITE';
 export const EDIT = 'site.EDIT';
@@ -34,6 +35,20 @@ export const fetchAllSite = () => {
   }
 };
 
+// 删除
+export function deleteSiteAction(data){
+  return (dispatch) => {
+    ajax({
+      url: 'api/site/delete',
+      data: data,
+      method:"post",
+      success: (data) => {
+        dispatch(fetchAllSite())
+      }
+    })
+  }
+};
+
 // 保存
 export function saveSiteAction(data){
   return (dispatch) => {
@@ -47,6 +62,8 @@ export function saveSiteAction(data){
     })
   }
 };
+
+
 // 更新
 export function updateSiteAction(data){
   return (dispatch) => {

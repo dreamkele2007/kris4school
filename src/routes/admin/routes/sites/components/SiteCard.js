@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Form,Button, Card} from 'antd';
-import {editSiteAction,saveSiteAction,updateSiteAction} from '../../../models/site';
+import {editSiteAction,deleteSiteAction,saveSiteAction,updateSiteAction} from '../../../models/site';
 import SiteForm  from './SiteForm'
 class SiteCard extends Component {
 
@@ -22,14 +22,17 @@ class SiteCard extends Component {
   };
 
   handleEdit = () => {
-    const {dispatch} = this.props;
     let id = this.props.form.getFieldValue("id");
-    dispatch(editSiteAction(id))
+    this.props.dispatch(editSiteAction(id))
   }
 
   handleCancel = () =>{
-    const {dispatch} = this.props;
-    dispatch(editSiteAction(""))
+    this.props.dispatch(editSiteAction(""))
+  }
+
+  handleDel =()=>{
+    let data = this.props.form.getFieldsValue();
+    this.props.dispatch(deleteSiteAction(data))
   }
 
   render() {
@@ -44,7 +47,10 @@ class SiteCard extends Component {
             <Button style={{marginRight: 8}} type="primary"  onClick={this.handleSave}>保存</Button>
           </div>
           :
-          <Button style={{marginRight: 8}} onClick={this.handleEdit}>修改</Button>
+          <div>
+            <Button style={{marginRight: 8}} onClick={this.handleEdit}>修改</Button>
+            <Button style={{marginRight: 8}} onClick={this.handleDel}>删除</Button>
+          </div>
         }
       </Card>
       

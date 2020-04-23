@@ -2,14 +2,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import SiteCard from './components/SiteCard';
 import SiteModal from './components/SiteModal';
-import {fetchAllSite,addSiteAction,saveSiteAction,addOKSiteAction} from '../../models/site';
+import {fetchAllSite,addSiteAction,saveSiteAction} from '../../models/site';
 import { Button,Col } from 'antd';
 
 class Sites extends Component {
 
   componentDidMount() {
-    const {dispatch} = this.props;
-    dispatch(fetchAllSite())
+    this.props.dispatch(fetchAllSite())
   }  
 
 

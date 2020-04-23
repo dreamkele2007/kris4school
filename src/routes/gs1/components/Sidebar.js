@@ -5,6 +5,7 @@ import {Layout,Menu,Icon,Button} from 'vdap-ui';
 import { connect } from 'react-redux';
 const SubMenu=Menu.SubMenu;
 const {Sider} = Layout;
+// 侧边栏
 class Sidebar extends Component {
   state = {
     collapsed: false,
@@ -60,40 +61,40 @@ class Sidebar extends Component {
             {/*<Menu.Item key="2">*/}
               {/*<Link to={`${match.url}/homePage1`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 首页</Link>*/}
             {/*</Menu.Item>*/}
-            <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>主数据档案</span></span>}>
+            <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>基础数据</span></span>}>
               <Menu.Item key="3">
-                <Link to={`${match.url}/Product/Hospital`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 医院</Link>
+                <Link to={`${match.url}/Product/Hospital`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 实验室</Link>
               </Menu.Item>
               <Menu.Item key="4">
-                <Link to={`${match.url}/Product/PraductData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 产品</Link>
+                <Link to={`${match.url}/Product/PraductData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 计算机</Link>
               </Menu.Item>
               <Menu.Item key="5">
-                <Link to={`${match.url}/Product/ManufacturingData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 厂商</Link>
+                <Link to={`${match.url}/Product/ManufacturingData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 服务器</Link>
               </Menu.Item>
-              <Menu.Item key="6">
+              {/* <Menu.Item key="6">
                 <Link to={`${match.url}/Product/gpcCatagoryDictViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 产品分类</Link>
-              </Menu.Item>
+              </Menu.Item> */}
             </SubMenu>
-            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>编码中心同步</span></span>}>
+            <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>实验排课</span></span>}>
               <Menu.Item key="8">
-                <Link to={`${match.url}/result/DataRenewManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 数据同步</Link>
+                <Link to={`${match.url}/result/DataRenewManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 实验安排</Link>
               </Menu.Item>
               <Menu.Item key="9">
-                <Link to={`${match.url}/result/ResultViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 数据审核</Link>
+                <Link to={`${match.url}/result/ResultViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 预约审核</Link>
               </Menu.Item>
               <Menu.Item key="10">
-                <Link to={`${match.url}/result/UpdateRecordManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 更新记录</Link>
+                <Link to={`${match.url}/result/UpdateRecordManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 课表发布</Link>
               </Menu.Item>
               <Menu.Item key="11">
                 <Link to={`${match.url}/result/NoticeRecordManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 通知记录</Link>
               </Menu.Item>
              </SubMenu>
-            <SubMenu key="sub3" title={<span><Icon type="appstore" /><span>档案共享</span></span>}>
+            <SubMenu key="sub3" title={<span><Icon type="appstore" /><span>文档管理</span></span>}>
               <Menu.Item key="21">
-                <Link to={`${match.url}/fileSharing/DocumentDistributeManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 档案分发</Link>
+                <Link to={`${match.url}/fileSharing/DocumentDistributeManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 公告维护</Link>
               </Menu.Item>
             </SubMenu>
-            <SubMenu key="sub4" title={<span><Icon type="appstore" /><span>医院主数据档案查询</span></span>}>
+            <SubMenu key="sub4" title={<span><Icon type="appstore" /><span>教学课件</span></span>}>
               <Menu.Item key="13">
                 <Link to={`${match.url}/platform/platformDomainManuDict`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 厂商</Link>
               </Menu.Item>
@@ -109,18 +110,6 @@ class Sidebar extends Component {
                 <Link to={`${match.url}/api/TaskMonitorManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 任务监控</Link>
               </Menu.Item>
             </SubMenu>
-            <SubMenu key="sub6" title={<span><Icon type="appstore" /><span>系统管理</span></span>}>
-              <Menu.Item key="16">
-                <Link to={`${match.url}/system/TaskMainViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 任务管理</Link>
-              </Menu.Item>
-              <Menu.Item key="17">
-                <Link to={`${match.url}/system/Authorization`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 注册租户管理</Link>
-              </Menu.Item>
-              <Menu.Item key="21">
-                <Link to={`${match.url}/system/DomainCallbackUrl`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 租户访问地址</Link>
-              </Menu.Item>
-            </SubMenu>
-
             {/*<SubMenu key="sub7" title={<span><Icon type="appstore" /><span>医院主数据档案</span></span>}>
               <Menu.Item key="18">
                 <Link to={`${match.url}/dataFile/DomainManuDitManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 厂商</Link>

@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <footer className="app-footer">
-        <a href={APPCONFIG.productLink}>viewhigh</a> &copy; {`${APPCONFIG.year}  ${APPCONFIG.brand}`}.
+        <a href={APPCONFIG.productLink}>kris</a> &copy; {`${APPCONFIG.year}  ${APPCONFIG.brand}`}.
         <span className="float-right">...</span>
       </footer>
     )

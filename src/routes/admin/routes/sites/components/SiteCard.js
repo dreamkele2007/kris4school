@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
-import {Row, Col, Form, Button} from 'antd';
+import {Form,Button, Card} from 'antd';
 import {editSiteAction,saveSiteAction,updateSiteAction} from '../../../models/site';
 import SiteForm  from './SiteForm'
 class SiteCard extends Component {
 
-  handleSubmit = (e) => {
+  handleSave = (e) => {
     e.preventDefault();
-    const {form, site,dispatch} = this.props;
+    const {form,dispatch} = this.props;
     form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        console.log('Received values of props: ',site);
         let data = this.props.form.getFieldsValue();
         let id = this.props.form.getFieldValue("id");
         if(id){
@@ -22,7 +20,6 @@ class SiteCard extends Component {
     });
     
   };
-  
 
   handleEdit = () => {
     const {dispatch} = this.props;
@@ -37,32 +34,22 @@ class SiteCard extends Component {
 
   render() {
     const {item,edit,index} = this.props;
-    
     return (
-      <Row>
+      <Card>
         <SiteForm {...this.props} item={item} edit={edit} index={index}/>
-        <Col span={24} style={{textAlign: 'right'}}>
-          { 
-            this.props.edit ? 
-            <div>
-              <Button style={{marginRight: 8}}  onClick={()=> this.handleCancel()}>取消</Button>
-              <Button style={{marginRight: 8}} type="primary"  onClick={this.handleSubmit}>保存</Button>
-            </div>
-            :
-            <Button style={{marginRight: 8}} onClick={()=> this.handleEdit()}>修改</Button>
-          }
-        </Col>
-      </Row>
+        { 
+          this.props.edit ? 
+          <div>
+            <Button style={{marginRight: 8}}  onClick={this.handleCancel}>取消</Button>
+            <Button style={{marginRight: 8}} type="primary"  onClick={this.handleSave}>保存</Button>
+          </div>
+          :
+          <Button style={{marginRight: 8}} onClick={this.handleEdit}>修改</Button>
+        }
+      </Card>
+      
     )
   }
 }
 
-
-
-const mapPropsToFields = (props) => {
-  return {};
-}
-
-export default Form.create({
-  mapPropsToFields,
-})(SiteCard);
+export default Form.create()(SiteCard);

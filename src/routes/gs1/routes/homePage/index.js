@@ -452,13 +452,13 @@ class Dashboard extends Component {
     const  echarDataName=this.echardataName();
     const option = {
       title: {
-        text: '各医院\n上传文件总数/稽核完成数',
+        text: '总学时',
       },
       tooltip : {
         trigger: 'axis'
       },
       legend: {
-        data:['上传文件总数','稽核文件总数']
+        data:['总学时','占用学时']
       },
       toolbox: {
         show : true,
@@ -498,13 +498,13 @@ class Dashboard extends Component {
     };
      const option1 = {
       title: {
-        text: '各医院\n稽核后的厂商/产品总数',
+        text: '实验室计算机',
       },
       tooltip : {
         trigger: 'axis'
       },
       legend: {
-        data:['厂商','产品']
+        data:['实验室','计算机']
       },
       toolbox: {
         show : true,
@@ -594,12 +594,12 @@ class Dashboard extends Component {
           <div style={{width:'100%',marginTop:10}}>
             <div className="row" >
               <div  style={{width:'48%',marginLeft:"1%"}} >
-                <p style={{marginTop:5,marginLeft:5,fontSize:14}}>医院标准数据库(各核心数据总条数)</p>
+                <p style={{marginTop:5,marginLeft:5,fontSize:14}}>实验室</p>
                 <div className="row" style={{marginTop:30,marginLeft:15}}>
                   <div  className="col-sm-6 col-lg-3" style={{ width:'41%'}}>
                     <div  className="card card-inverse ">
                       <div className="card-block"  style={{background:"#FA2A00"}}>
-                        <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>GS1标准产品</div>
+                        <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>计算机</div>
                         <div style={{textAlign:'center',fontSize:30}}><a  onClick={()=>{this.onRowClick('totalNum',-1)}}>{this.state.totalNum}</a></div>
                       </div>
                     </div>
@@ -607,7 +607,7 @@ class Dashboard extends Component {
                   <div  className="col-sm-6 col-lg-3" style={{ width:'41%'}}>
                     <div  className="card card-inverse">
                       <div className="card-block" style={{background:"#FFB400"}}>
-                        <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>GS1标准厂商</div>
+                        <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>服务器</div>
                         <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.onRowClick('prodctManuNum',-1)}}>{this.state.prodctManuNum}</a></div>
                       </div>
                     </div>
@@ -618,7 +618,7 @@ class Dashboard extends Component {
                 <div className="row " style={{marginTop:-20,width:'98%'}}>
                   <div className="col-xl-6 "  style={{width:'98%'}}>
                     <div className="card-block">
-                      <img src={require('assets/images/ui/14.png')} style={{width:"110%"}} />
+                      {/* <img src={require('')} style={{width:"110%"}} /> */}
                     </div>
                   </div>
                 </div>
@@ -626,74 +626,6 @@ class Dashboard extends Component {
             </div>
           </div>
 
-        </div>
-
-        <div style={{width:'100%',marginTop:10}}>
-          <div className="row" >
-            <div    style={{width:'60%',marginLeft:'1.2%'}}>
-              <p style={{marginTop:5,marginLeft:5,fontSize:14}}>数据变化(截止{this.time()})</p>
-              <div className="row" style={{marginTop:20,marginLeft:15}} >
-                <div  className="col-sm-6 col-lg-3" style={{ width:'33%'}}>
-                  <div  className="card card-inverse ">
-                    <div className="card-block" style={{background:"#1ABC9C"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>最近新增产品</div>
-                      <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.onRowClick('newNum',-1)}}>{this.state.newNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3" style={{width:'33%'}}>
-                  <div className="card card-inverse ">
-                    <div className="card-block" style={{background:"#4C87ED"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}}>最近更新产品</div>
-                      <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.onRowClick('updateNum',-1)}}>{this.state.updateNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3" style={{width:'33%'}}>
-                  <div className="card card-inverse">
-                    <div className="card-block" style={{background:"#22A7F0"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}} >最近注销产品</div>
-                      <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.onRowClick('cancelNum',-1)}}>{this.state.cancelNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3" style={{width:'33%'}}>
-                  <div className="card card-inverse ">
-                    <div className="card-block" style={{background:"#1ABC9C"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}} >累计注销</div>
-                      <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.onRowClick('sumCancelNum',-1)}}>{this.state.sumCancelNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-sm-6 col-lg-3" style={{width:'33%'}}>
-                  <div className="card card-inverse ">
-                    <div className="card-block" style={{background:"#4C87ED"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}} >历史更新</div>
-                      <div style={{textAlign:'center',fontSize:30}}><a onClick={()=>{this.queryHistorical()}}>{this.state.historicallNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-sm-6 col-lg-3" style={{width:'33%'}}>
-                  <div className="card card-inverse ">
-                    <div className="card-block" style={{background:"#22A7F0"}}>
-                      <div className="h4 m-0" style={{textAlign:'center',fontSize:20}} >对接医院总数</div>
-                      <div style={{textAlign:'center',fontSize:30}} ><a onClick={()=>{this.hospital()}}>{this.state.hospitalNum}</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div  style={{marginTop:-10,width:'30%'}}>
-              <div className="row">
-                <div style={{width:500}} className="col-sm-6 col-lg-3">
-                    <div  className="card-block">
-                      <ContentMore contents={taskMore}/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div>
           <div style={{width:'100%',marginTop:10}}>

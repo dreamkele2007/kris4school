@@ -112,7 +112,7 @@ const initialState = {
 };
 
 
-export default function siteReducer(state= {data: [],edit: "",visible: false} , action) {
+export default function siteReducer(state= {data: [],edit: "",showModal: false} , action) {
   switch (action.type) {
     case REQUEST_SITE:
       return Object.assign({}, state);
@@ -139,7 +139,7 @@ export default function siteReducer(state= {data: [],edit: "",visible: false} , 
     case ADD:
         newState = {
           ...state,
-          visible:action.visible
+          showModal:action.visible
         };
       return {...newState};
     case ADD_OK:

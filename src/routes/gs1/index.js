@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 import Loadable from 'components/Loadable';
 import Breadcrumb from './components/Breadcrumb';
 import HomePage from './routes/homePage/index';
-import HomePage1 from './routes/homePage/domainIndex';
 import {MainApp} from './components';
 
 // 主数据档案
@@ -131,7 +130,6 @@ class Page extends Component {
           <Switch>
             {/******************************************/}
             <Route path={`${match.url}/thome`} name="实验室首页-教师"  component={HomePage}/>
-            <Route path={`${match.url}/shome`} name="实验室首页-学生" component={HomePage1}/>
             {/*主数据档案*/}
             {/* <Route path={`${match.url}/Product/Hospital`} breadcrumbName='Detail' name="医院" component={HospitalViewer}/>
             <Route path={`${match.url}/Product/PraductData`} name="产品" component={ProductDataViewer}/>

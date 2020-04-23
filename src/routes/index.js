@@ -1,7 +1,7 @@
 import Loadable from 'components/Loadable';
 import Login from './login/';
 import Admin from './admin/';
-import GS1 from './gs1/';
+import Kris from './gs1/';
 
 
 const routes = [
@@ -18,7 +18,7 @@ const routes = [
   {
     name: "实验室管理",
     path: '/kris',
-    component: GS1
+    component: Kris
   }
   
 ];

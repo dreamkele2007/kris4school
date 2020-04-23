@@ -12,7 +12,6 @@ import {fetchSiteById,fetchAllSite} from './models/site';
 import Dashboard from './routes/dashboard/';
 import Sites from './routes/sites/';
 import Users from './routes/users/';
-import Security from './routes/security';
 import Pages from './routes/pages/';
 import reducer from './models/site';
 
@@ -38,7 +37,6 @@ class Page extends Component {
                 <Route path={`${match.url}/users`} name="用户管理" component={Users}/>
                 <Route path={`${match.url}/dashboard`} name="概览" component={Dashboard}/>
                 <Route path={`${match.url}/sites`} name="站点管理" component={Sites}/>
-                <Route path={`${match.url}/security`} name="验证授权" component={Security}/>
                 <Route path={`${match.url}/pages`} name="页面定义" component={Pages}/>
                 <Route path={`${match.url}/sysmanage`} name="站点管理" component={Pages}/>
                 <Redirect from={match.url} to={`${match.url}/users`}/>

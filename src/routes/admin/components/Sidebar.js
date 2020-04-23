@@ -105,9 +105,6 @@ class Sidebar extends Component {
             <li className="nav-item">
               <Link to={`${match.url}/users`} className="nav-link" activeClassName="active"><i className="icon-pie-chart"></i> 用户管理</Link>
             </li>
-            <li className="nav-item">
-              <Link to={`${match.url}/security`} className="nav-link" activeClassName="active"><i className="icon-pie-chart"></i> 验证授权</Link>
-            </li>
             <li className="divider"></li>
             <li className="nav-title">
               应用管理

@@ -4,7 +4,6 @@ import * as types from '../constants/ActionTypes';
 const initialSettings = APPCONFIG.settings;
 
 const settings = (state = initialSettings, action) => {
-  // console.log(action)
   switch (action.type) {
 
     case types.TOGGLE_COLLAPSED_SIDEBAR:

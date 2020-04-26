@@ -3,6 +3,8 @@ import {routerReducer} from 'react-router-redux';
 import settings from './settings';
 import uiReducer from './ui/uiReducer';
 import ApiQuery from '../routes/gs1/models/reducers/api/apiFormReducer'
+import SideReducer from '../routes/gs1/models/site'
+
 import ProductQUERY from '../routes/gs1/models/reducers/product/productReducer'
 import  GoveDataQuery from '../routes/gs1/models/reducers/goveData/goveDataReducer';
 import checkResultReducer from '../routes/gs1/models/reducers/dataCheck/checkResultReducer'
@@ -25,7 +27,6 @@ import gpcCatagoryQuery from '../routes/gs1/models/reducers/gpcCatagory/gpcCatag
 import HospitalQuery from '../routes/gs1/models/reducers/hospital/hospitalAction'
 import domainManuDictReducer from '../routes/gs1/models/reducers/manuDict/domainManuDictReducer'
 import GpcCode from '../routes/gs1/models/reducers/gpcCode/GpcCode'
-import documentDistributeReducer from '../routes/gs1/models/reducers/documentDistribute/documentDistributeReducer'
 import MasterDataMenuReducer from '../routes/gs1/models/reducers/masterDataMenu/MasterDataMenuReducer'
 import RuleReducer from '../routes/gs1/models/reducers/rule/RuleReducer'
 export const makeRootReducer = (asyncReducers) => {
@@ -34,31 +35,7 @@ export const makeRootReducer = (asyncReducers) => {
     settings,
     ui:uiReducer,
     ...asyncReducers,
-    ApiQuery,
-    ProductQUERY,
-    GoveDataQuery,
-    manuDict,
-    NoticeQUERY,
-    checkResultReducer,
-    ProductStandardQuery,
-    DomainOperation,
-    taskMonitor,
-    GoveQuery,
-    GoveQueryOne,
-    MenuDitQuery,
-    dataRenewReducer,
-    regionDict,
-    regionQuery,
-    gpcCatagory,
-    HospitalQuery,
-    domainManuDictReducer,
-    gpcCatagoryQuery,
-    documentDistributeReducer,
-    taskReducer,
-    GpcCode,
-    MasterDataMenuReducer,
-    RuleReducer,
-    dataCheckDataReducer
+    site:SideReducer
   })
 };
 

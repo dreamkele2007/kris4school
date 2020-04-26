@@ -56,24 +56,24 @@ class Sidebar extends Component {
           </Button> */}
           <Menu theme="light"  mode={this.state.mode} style={{border:'none'}} className={this.state.collapsed?'show':'scroll' } >
             <Menu.Item key="1">
-              <Link to={`${match.url}/homePage`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 首页</Link>
+              <Link to={`${match.url}/shome`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 首页</Link>
             </Menu.Item>
             {/*<Menu.Item key="2">*/}
-              {/*<Link to={`${match.url}/homePage1`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 首页</Link>*/}
+              {/*<Link to={`${match.url}/thome`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 首页</Link>*/}
             {/*</Menu.Item>*/}
             <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>基础数据</span></span>}>
               <Menu.Item key="3">
+                <Link to={`${match.url}/site/manage`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 站点维护</Link>
+              </Menu.Item>  
+              <Menu.Item key="4">
                 <Link to={`${match.url}/Product/Hospital`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 实验室</Link>
               </Menu.Item>
-              <Menu.Item key="4">
+              <Menu.Item key="5">
                 <Link to={`${match.url}/Product/PraductData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 计算机</Link>
               </Menu.Item>
-              <Menu.Item key="5">
+              <Menu.Item key="6">
                 <Link to={`${match.url}/Product/ManufacturingData`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 服务器</Link>
               </Menu.Item>
-              {/* <Menu.Item key="6">
-                <Link to={`${match.url}/Product/gpcCatagoryDictViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 产品分类</Link>
-              </Menu.Item> */}
             </SubMenu>
             <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>实验排课</span></span>}>
               <Menu.Item key="8">
@@ -110,27 +110,6 @@ class Sidebar extends Component {
                 <Link to={`${match.url}/api/TaskMonitorManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 任务监控</Link>
               </Menu.Item>
             </SubMenu>
-            {/*<SubMenu key="sub7" title={<span><Icon type="appstore" /><span>医院主数据档案</span></span>}>
-              <Menu.Item key="18">
-                <Link to={`${match.url}/dataFile/DomainManuDitManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 厂商</Link>
-              </Menu.Item>
-              <Menu.Item key="19">
-                <Link to={`${match.url}/dataFile/DomainDataDitManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 产品</Link>
-              </Menu.Item>
-            </SubMenu>
-            <SubMenu key="sub8" title={<span><Icon type="appstore" /><span>数据质量</span></span>}>
-              <Menu.Item key="20">
-                <Link to={`${match.url}/newDataGovernance/UploadAndDownloadManagerViewer`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 上传数据检查</Link>
-              </Menu.Item>
-            </SubMenu>*/}
-            {/*<SubMenu key="sub9" title={<span><Icon type="appstore" /><span>可视化</span></span>}>*/}
-              {/*<Menu.Item key="20">*/}
-                {/*<Link to={`${match.url}/system/LayoutDemo`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 视图</Link>*/}
-              {/*</Menu.Item>*/}
-              {/*<Menu.Item key="21">*/}
-                {/*<Link to={`${match.url}/system/LayoutDemoBase`} className="nav-link" activeClassName="active"><i className="icon-grid"></i> 原型</Link>*/}
-              {/*</Menu.Item>*/}
-            {/*</SubMenu>*/}
           </Menu>
         </Sider>
     )
@@ -146,4 +125,3 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(
   mapStateToProps
 )(Sidebar);
-// export default Sidebar;

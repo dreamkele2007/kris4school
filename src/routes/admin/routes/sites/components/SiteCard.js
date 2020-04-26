@@ -51,6 +51,7 @@ class SiteCard extends Component {
             <Button style={{marginRight: 8}} onClick={this.handleEdit}>修改</Button>
             <Button style={{marginRight: 8}} onClick={this.handleDel}>删除</Button>
           </div>
+            
         }
       </Card>
       

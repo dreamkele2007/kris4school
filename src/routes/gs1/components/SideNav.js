@@ -38,7 +38,6 @@ class SideNav extends Component {
   };
 
   render() {
-    console.log("<<<<<<<<<<<<<<<");
     console.log(this.props);
      let {sideCollapsed, menu} = this.props.sideNavPin;
      const menuItems = this.getMenus(menu, sideCollapsed);

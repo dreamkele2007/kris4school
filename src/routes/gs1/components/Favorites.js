@@ -1,5 +1,5 @@
 import React from 'react';
-import {Menu,Icon} from 'vdap-ui';
+import {Menu,Icon} from 'antd';
 import { connect } from 'react-redux';
 import  {sideNavPin} from 'actions/ui/uiAction';
 import SideNavConfig from './SideNavConfig';
@@ -46,7 +46,6 @@ class Favorites extends React.Component{
      const menuItems = this.getMenus(menu, sideCollapsed);
     return (
       <div style={{zIndex:9999 }}>
-
          <Menu theme="light" mode="inline" defaultSelectedKeys={['two']} style={{height:'95vh',width:'200px',overflow: 'initial',backgroundColor:'white'}}>
           {topmenu?
               <Menu.Item key={topmenu.key}>

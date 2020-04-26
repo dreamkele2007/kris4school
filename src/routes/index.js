@@ -1,4 +1,3 @@
-import Loadable from 'components/Loadable';
 import Login from './login/';
 import Admin from './admin/';
 import Kris from './gs1/';

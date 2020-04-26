@@ -7,18 +7,15 @@ import {makeRootReducer} from 'reducers'
 
 const logger = createLogger({
   collapsed: false,
-
 });
 
 const createStore = (initialState = {}) => {
 
-  const middleware = [thunk, logger];
-
-
+  const middleware = [thunk];
   const enhancers = [];
+
   let composeEnhancers = compose;
-
-
+  
   const store = createReduxStore(
     makeRootReducer(),
     initialState,

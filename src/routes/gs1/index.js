@@ -5,6 +5,10 @@ import {connect} from 'react-redux'
 import Loadable from 'components/Loadable';
 import Breadcrumb from './components/Breadcrumb';
 import HomePage from './routes/homePage/index';
+import StudentHome from './routes/shome/index';
+import SiteManage from './routes/siteManage/index';
+
+
 import {MainApp} from './components';
 
 // 主数据档案
@@ -52,10 +56,7 @@ import {MainApp} from './components';
 //   loader: () => import(/* webpackChunkName: "AddDataViewer" */'./routes/taskNoticeRecord/components/AddDataViewer')
 // });
 
-// //---------------档案分享-----------------------
-// const DocumentDistributeManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "DocumentDistributeManagerViewer" */'./routes/documentDistribute/components/DocumentDistributeManagerViewer')
-// });
+
 // // ------------医院主数据档案查询---------------
 // const platformDomainManuDict = Loadable({
 //   loader: () => import(/* webpackChunkName: "platformDomainManuDict" */'./routes/platformDomainManuDict/components/DomainManuDitManagerViewer')
@@ -96,9 +97,6 @@ import {MainApp} from './components';
 // const ManualReviewManagerViewer = Loadable({
 //   loader: () => import(/* webpackChunkName: "ManualReviewManagerViewer" */'./routes/manualReview/components/ManualReviewManagerViewer')
 // });
-// const NotificationRecord = Loadable({
-//   loader: () => import(/* webpackChunkName: "NotificationRecord" */'./routes/notificationRecord/components/NoticeRecordManagerViewer')
-// });
 // const HistoryUpdateRecord = Loadable({
 //   loader: () => import(/* webpackChunkName: "HistoryUpdateRecord" */'./routes/homePage/components/HistoryUpdateRecord')
 // });
@@ -108,9 +106,7 @@ import {MainApp} from './components';
 // const ArtificialTotalViewer = Loadable({
 //   loader: () => import(/* webpackChunkName: "ArtificialTotalViewer" */'./routes/artificialMatching/components/ArtificialTotalViewer')
 // });
-// const RegisterDomainManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "RegisterDomainManagerViewer" */'./routes/registeredTenant/components/RegisterDomainManagerViewer')
-// });
+
 
 
 class Page extends Component {
@@ -129,9 +125,10 @@ class Page extends Component {
           <Breadcrumb/>
           <Switch>
             {/******************************************/}
-            <Route path={`${match.url}/thome`} name="实验室首页-教师"  component={HomePage}/>
-            {/*主数据档案*/}
-            {/* <Route path={`${match.url}/Product/Hospital`} breadcrumbName='Detail' name="医院" component={HospitalViewer}/>
+            <Route path={`${match.url}/shome`} name="实验室首页-学生"  component={StudentHome}/>
+            {/*数据档案*/}
+            <Route path={`${match.url}/site/manage`} breadcrumbName='Detail' name="站点管理" component={SiteManage}/>
+            {/* <Route path={`${match.url}/site/manage`} breadcrumbName='Detail' name="医院" component={SiteManage}/>
             <Route path={`${match.url}/Product/PraductData`} name="产品" component={ProductDataViewer}/>
             <Route path={`${match.url}/Product/ManufacturingData`} name="厂商" component={ManufacturingDataViewer}/>
             <Route path={`${match.url}/Product/gpcCatagoryDictViewer`} name="产品分类" component={GpcCategoryViewer}/> */}
@@ -156,7 +153,6 @@ class Page extends Component {
             {/*系统管理*/}
             {/* <Route path={`${match.url}/system/TaskMainViewer`} name="任务管理" component={TaskManagerViewer}/>
             <Route path={`${match.url}/system/Authorization`} name="注册租户管理" component={Authorization}/>
-            <Route path={`${match.url}/system/DomainCallbackUrl`} name="租户访问地址" component={DomainCallbackUrl}/> */}
             {/*医院主数据档案*/}
             {/* <Route path={`${match.url}/dataFile/DomainManuDitManagerViewer`} name="厂商" component={DomainManuDictManagerViewer}/>
             <Route path={`${match.url}/dataFile/DomainDataDitManagerViewer`} name="产品" component={DomainDataDictManagerViewer}/> */}
@@ -164,13 +160,11 @@ class Page extends Component {
             {/* <Route path={`${match.url}/newDataGovernance/UploadAndDownloadManagerViewer`} name="上传下载" component={UploadAndDownloadManagerViewer}/>
             <Route path={`${match.url}/newDataGovernance/ManualReviewManagerViewer`} name="数据稽核" component={ManualReviewManagerViewer}/> */}
             {/******************************************/}
-            {/* <Route path={`${match.url}/Product/NotificationRecord`} name="通知记录" component={NotificationRecord}/>
-            <Route path={`${match.url}/HistoryUpdateRecord`} name="历史更新数据" component={HistoryUpdateRecord}/>
+            {/* <Route path={`${match.url}/HistoryUpdateRecord`} name="历史更新数据" component={HistoryUpdateRecord}/>
             <Route path={`${match.url}/dataGovernance/ArtificialMatchingViewer`} name="数据匹配" component={ArtificialMatchingViewer}/>
             <Route path={`${match.url}/dataGovernance/ArtificialTotalViewer`} name="详情数据" component={ArtificialTotalViewer}/>
-            <Route path={`${match.url}/system/RegisterDomainManagerViewer`} name="注册租户管理" component={RegisterDomainManagerViewer}/> */}
-            {/*<Route path={`${match.url}/system/LayoutDemo`} name="可视化" component={LayoutDemo}/>*/}
-            <Redirect from={match.url} to={`${match.url}/thome`}/>
+            <Route path={`${match.url}/system/LayoutDemo`} name="可视化" component={LayoutDemo}/> */}
+            <Redirect from={match.url} to={`${match.url}/shome`}/>
           </Switch>
         </MainApp>
       </div>

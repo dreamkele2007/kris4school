@@ -1,5 +1,5 @@
 ## 安装yarn
-cnpm install -g yarn
+npm install -g yarn
 
 ## 切换源:淘宝源安装（安装会比较快）
 yarn config set registry https://registry.npm.taobao.org

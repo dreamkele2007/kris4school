@@ -18,59 +18,8 @@ import {MainApp} from './components';
 // const ProductDataViewer = Loadable({
 //   loader: () => import(/* webpackChunkName: "ProductDataViewer" */'./routes/product/components/ProductManagerViewer')
 // });
-// const ManufacturingDataViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "ManufacturingDataViewer" */'./routes/manufacturing/components/ProductManagerViewer')
-// });
-// const GpcCategoryViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "GpcCategoryViewer" */'./routes/gpcCatagoryDict/components/GpcCatagoryViewer')
-// });
 
 
-// 编码中心同步
-// const DataRenewManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "DataRenewManagerViewer" */'./routes/dataRenew/components/DataRenewManagerViewer')
-// });
-// const CheckResultViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "CheckResultViewer" */'./routes/dataCheck/components/CheckResultManagerViewer')
-// });
-// const DataCheckManuDownLoadInfoViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "DataCheckManuDownLoadInfoViewer" */'./routes/dataCheck/components/DataCheckManuDownLoadInfoViewer')
-// });
-// const DataViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "DataViewer" */'./routes/dataCheck/components/DataViewer')
-// });
-// const UpdateRecordViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "UpdateRecordViewer" */'./routes/dataUpdateRecord/components/UpdateRecordManagerViewer')
-// });
-// const UpdateRecordManuDownLoadInfoViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "UpdateRecordManuDownLoadInfoViewer" */'./routes/dataUpdateRecord/components/UpdateRecordManuDownLoadInfoViewer')
-// });
-// const UpdateRecordDataViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "UpdateRecordDataViewer" */'./routes/dataUpdateRecord/components/UpdateRecordDataViewer')
-// });
-// // -------------------------------
-// const NoticeRecordViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "NoticeRecordViewer" */'./routes/taskNoticeRecord/components/NoticeRecordManagerViewer')
-// });
-// const AddDataViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "AddDataViewer" */'./routes/taskNoticeRecord/components/AddDataViewer')
-// });
-
-
-// // ------------医院主数据档案查询---------------
-// const platformDomainManuDict = Loadable({
-//   loader: () => import(/* webpackChunkName: "platformDomainManuDict" */'./routes/platformDomainManuDict/components/DomainManuDitManagerViewer')
-// });
-// const platformDomainDataDict = Loadable({
-//   loader: () => import(/* webpackChunkName: "platformDomainDataDict" */'./routes/platformDomainDataDict/components/DomainDataDitManagerViewer')
-// });
-// // --------------监控管理 ------------
-// const ApiCallLogViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "ApiCallLogViewer" */'./routes/apiCallLog/components/ApiCallLogViewer')
-// });
-// const TaskMonitorManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "TaskMonitorManagerViewer" */'./routes/taskMonitor/components/TaskMonitorManagerViewer')
-// });
 
 // // 系统管理
 // const TaskManagerViewer = Loadable({
@@ -90,22 +39,7 @@ import {MainApp} from './components';
 // const DomainDataDictManagerViewer = Loadable({
 //   loader: () => import(/* webpackChunkName: "DomainDataDictManagerViewer" */'./routes/domainDataDict/components/DomainDataDitManagerViewer')
 // });
-// // --------------数据质量-----------
-// const UploadAndDownloadManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "UploadAndDownloadManagerViewer" */'./routes/uploadAndDownload/components/UploadAndDownloadManagerViewer')
-// });
-// const ManualReviewManagerViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "ManualReviewManagerViewer" */'./routes/manualReview/components/ManualReviewManagerViewer')
-// });
-// const HistoryUpdateRecord = Loadable({
-//   loader: () => import(/* webpackChunkName: "HistoryUpdateRecord" */'./routes/homePage/components/HistoryUpdateRecord')
-// });
-// const ArtificialMatchingViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "ArtificialMatchingViewer" */'./routes/artificialMatching/components/ArtificialMatchingViewer')
-// });
-// const ArtificialTotalViewer = Loadable({
-//   loader: () => import(/* webpackChunkName: "ArtificialTotalViewer" */'./routes/artificialMatching/components/ArtificialTotalViewer')
-// });
+
 
 
 

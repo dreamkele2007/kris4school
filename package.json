@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "antd": "^2.11.0",
+    "axios": "^0.19.2",
     "classnames": "^2.2.5",
     "echarts": "^3.6.0",
     "element-resize-event": "^2.0.9",
     "history": "^4.6.2",
     "object-assign": "4.1.1",
-    "prop-types": "^15.5.10",
     "photoswipe": "^4.1.2",
+    "prop-types": "^15.5.10",
     "rc-drawer": "^0.4.9",
     "rc-queue-anim": "^1.0.5",
     "react": "^15.6.0",
@@ -29,7 +30,7 @@
     "redux-thunk": "^2.2.0"
   },
   "proxy": "http://127.0.0.1:8888/",
-  "homePage":".",
+  "homePage": ".",
   "devDependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",

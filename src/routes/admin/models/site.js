@@ -1,4 +1,4 @@
-import ajax from '../../../constants/ajax';
+import service from '../../../constants/Service';
 import { func } from 'prop-types';
 export const REQUEST_SITE = 'site.REQUEST_SITE';
 export const RECEIVE_SITE = 'site.RECEIVE_SITE';
@@ -24,7 +24,7 @@ export function addOKSiteAction(){
 // 查询所有站点
 export const fetchAllSite = () => {
   return (dispatch) => {
-    ajax({
+    service({
       url: 'api/site/all',
       data: {},
       method:"get",
@@ -38,7 +38,7 @@ export const fetchAllSite = () => {
 // 删除
 export function deleteSiteAction(data){
   return (dispatch) => {
-    ajax({
+    service({
       url: 'api/site/delete',
       data: data,
       method:"post",
@@ -52,7 +52,7 @@ export function deleteSiteAction(data){
 // 保存
 export function saveSiteAction(data){
   return (dispatch) => {
-    ajax({
+    service({
       url: 'api/site/save',
       data: data,
       method:"post",
@@ -67,7 +67,7 @@ export function saveSiteAction(data){
 // 更新
 export function updateSiteAction(data){
   return (dispatch) => {
-    ajax({
+    service({
       url: 'api/site/update',
       data: data,
       method:"post",

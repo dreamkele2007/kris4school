@@ -1,12 +1,12 @@
-import L from 'react-loadable';
+import Loadable from 'react-loadable';
 import LoadingPage from './LoadingPage';
 
-const Loadable = opts =>
-  L({
+const withLoadable = comp =>
+  Loadable({
+    loader: comp,
     LoadingComponent:LoadingPage,
     delay:300,
-    ...opts
   });
 
-export default Loadable;
+export default withLoadable;
 

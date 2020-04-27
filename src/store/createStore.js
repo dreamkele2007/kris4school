@@ -1,31 +1,20 @@
 import {applyMiddleware, compose, createStore as createReduxStore} from 'redux'
 import thunk from 'redux-thunk'
-import {createLogger}  from 'redux-logger';
-
 import {makeRootReducer} from 'reducers'
 
-
-const logger = createLogger({
-  collapsed: false,
-});
 
 const createStore = (initialState = {}) => {
 
   const middleware = [thunk];
-  const enhancers = [];
-
-  let composeEnhancers = compose;
   
   const store = createReduxStore(
     makeRootReducer(),
     initialState,
-    composeEnhancers(
+    compose(
       applyMiddleware(...middleware),
-      ...enhancers
     )
   );
   store.asyncReducers = {};
-
 
   if (module.hot) {
     module.hot.accept('reducers', () => {

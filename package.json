@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^2.11.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.5",
     "echarts": "^3.6.0",
     "element-resize-event": "^2.0.9",
